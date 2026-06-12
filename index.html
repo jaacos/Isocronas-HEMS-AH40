@@ -96,7 +96,7 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-8 print-card">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm mb-8 print-card">
             <div class="p-5 bg-slate-50 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 print-header">
                 <div>
                     <h3 class="text-lg font-bold text-slate-800">Isócronas Oficiales</h3>
@@ -105,15 +105,66 @@
                 <span class="bg-blue-100 text-blue-800 text-[11px] font-extrabold px-2.5 py-1 rounded-full border border-blue-200">+3 min Arranque en Escena</span>
             </div>
 
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse">
+            <div class="w-full overflow-x-auto">
+                <table class="w-full text-left border-collapse text-xs sm:text-sm">
                     <thead>
-                        <tr class="bg-slate-100/70 border-b border-slate-200 text-xs font-bold text-slate-600 uppercase tracking-wider">
-                            <th class="p-4 pl-6">Lugar</th><th class="p-4 text-center">Ida (Min)</th><th class="p-4 text-center bg-red-50/50 text-[#D32F2F]">Arranque</th><th class="p-4 text-center font-bold text-red-700">Llegada</th><th class="p-4 text-center">Hospital</th><th class="p-4 text-center bg-blue-50/50 text-blue-700">Arranque</th><th class="p-4 text-center bg-slate-100">Total</th><th class="p-4 text-right pr-6">Terrestre</th>
+                        <tr class="bg-slate-100/70 border-b border-slate-200 text-[10px] sm:text-xs font-bold text-slate-600 uppercase tracking-wider">
+                            <th class="p-2 sm:p-4 pl-3 sm:pl-6">Lugar</th><th class="p-2 sm:p-4 text-center">Ida</th><th class="p-2 sm:p-4 text-center bg-red-50/50 text-[#D32F2F]">Arr.</th><th class="p-2 sm:p-4 text-center font-bold text-red-700">Lleg.</th><th class="p-2 sm:p-4 text-center">Hosp</th><th class="p-2 sm:p-4 text-center bg-blue-50/50 text-blue-700">Arr.</th><th class="p-2 sm:p-4 text-center bg-slate-100">Total</th><th class="p-2 sm:p-4 text-right pr-3 sm:pr-6">T.SVA</th>
                         </tr>
                     </thead>
-                    <tbody id="isocronas-tbody" class="divide-y divide-slate-100 text-sm"></tbody>
+                    <tbody id="isocronas-tbody" class="divide-y divide-slate-100"></tbody>
                 </table>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2 border-b pb-2 border-slate-100">
+                    <i data-lucide="shield-alert" class="text-[#D32F2F] w-5 h-5"></i> Ventajas del Transporte Aéreo
+                </h3>
+                <div class="space-y-3 text-xs">
+                    <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-800">Fuerzas G Homogéneas</span>
+                        <p class="text-slate-600 mt-1">Elimina frenazos y giros bruscos que afectan perfusión cerebral.</p>
+                    </div>
+                    <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-800">Absorción de Vibraciones</span>
+                        <p class="text-slate-600 mt-1">Vuela a >12 Hz vs terrestre 0.5-8 Hz (resonancia orgánica).</p>
+                    </div>
+                    <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-800">Presión Barométrica</span>
+                        <p class="text-slate-600 mt-1">Ley Boyle-Mariotte en cotas elevadas (Teide).</p>
+                    </div>
+                    <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-800">Reducción Isquemia</span>
+                        <p class="text-slate-600 mt-1">Minutos críticos = neuronas/miocardio salvados en Ictus/IAM.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2 border-b pb-2 border-slate-100">
+                    <i data-lucide="shield-check" class="text-[#D32F2F] w-5 h-5"></i> Criterios HEMS SUC
+                </h3>
+                <div class="space-y-3 text-xs">
+                    <div class="p-3 bg-green-50 rounded-lg border border-green-100">
+                        <span class="font-bold text-green-800">✔ Indicaciones:</span>
+                        <ul class="text-green-800 mt-1 list-disc pl-4 text-[11px]">
+                            <li>Código Ictus hiperagudo fuera corona metropolitana</li>
+                            <li>IAMCEST con angioplastia primaria rápida</li>
+                            <li>Politraumatizado crítico con compromiso CV/Vent</li>
+                            <li>Zonas periféricas aisladas orográficamente</li>
+                        </ul>
+                    </div>
+                    <div class="p-3 bg-amber-50 rounded-lg border border-amber-100">
+                        <span class="font-bold text-amber-800">⚠ Limitaciones:</span>
+                        <ul class="text-amber-800 mt-1 list-disc pl-4 text-[11px]">
+                            <li>Meteorología adversa (viento racheado, calima)</li>
+                            <li>Cabina volumen restringido</li>
+                            <li>Monitorización continua obligatoria</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -168,16 +219,16 @@
                 let savingClass = timeSaved > 0 ? "text-green-600 font-bold bg-green-50 border-green-100" : "text-amber-600 font-semibold bg-amber-50 border-amber-100";
 
                 const tr = document.createElement('tr');
-                tr.className = "hover:bg-slate-50/80 transition-colors";
+                tr.className = "hover:bg-slate-50/80 transition-colors text-xs sm:text-sm";
                 tr.innerHTML = `
-                    <td class="p-4 pl-6 font-semibold text-slate-800">${item.location}</td>
-                    <td class="p-4 text-center">${item.flightIn}</td>
-                    <td class="p-4 text-center bg-red-50/50 text-[#D32F2F]">+${currentMobilization}</td>
-                    <td class="p-4 text-center text-red-700 font-extrabold">${arrivalTime}</td>
-                    <td class="p-4 text-center">${item.hospBack}</td>
-                    <td class="p-4 text-center bg-blue-50/50 text-blue-700">+${currentStartupBack}</td>
-                    <td class="p-4 text-center bg-slate-100 font-black">${totalHemsTime}</td>
-                    <td class="p-4 text-right pr-6"><span class="text-xs">${item.groundSva}</span><br><span class="text-[10px] px-2 py-1 rounded border ${savingClass}">${timeSaved > 0 ? `+${timeSaved}m` : 'Asim'}</span></td>
+                    <td class="p-2 sm:p-4 pl-3 sm:pl-6 font-semibold text-slate-800 truncate">${item.location}</td>
+                    <td class="p-2 sm:p-4 text-center text-slate-600">${item.flightIn}</td>
+                    <td class="p-2 sm:p-4 text-center bg-red-50/50 text-[#D32F2F]">+${currentMobilization}</td>
+                    <td class="p-2 sm:p-4 text-center text-red-700 font-extrabold">${arrivalTime}</td>
+                    <td class="p-2 sm:p-4 text-center text-slate-600">${item.hospBack}</td>
+                    <td class="p-2 sm:p-4 text-center bg-blue-50/50 text-blue-700">+${currentStartupBack}</td>
+                    <td class="p-2 sm:p-4 text-center bg-slate-100 font-black">${totalHemsTime}</td>
+                    <td class="p-2 sm:p-4 text-right pr-3 sm:pr-6"><span class="block text-[10px] text-slate-500">${item.groundSva}</span><span class="text-[9px] px-1 py-0.5 rounded border ${savingClass} inline-block mt-0.5">${timeSaved > 0 ? `+${timeSaved}` : '✓'}</span></td>
                 `;
                 isocronasTbody.appendChild(tr);
             });
